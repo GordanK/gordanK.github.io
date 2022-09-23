@@ -4,15 +4,10 @@ export interface Hero {
   description: string;
 }
 
-export const heroes = [
-{
-  id:1,
-  name:'x-men',
-  description:'A men with iron claws'
-},
-
-
-
-
-
-]
+// export const heroes = [
+// {
+//   id:1,
+//   name:'x-men',
+//   description:'A men with iron claws'
+// },
+// ]
