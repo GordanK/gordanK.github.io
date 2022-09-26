@@ -8,7 +8,7 @@ import { Hero } from './hero';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
-      { id: 12, name: 'phd. Strange', description: 'loop on my hands' },
+      { id: 12, name: 'phd. Strange', description: 'loop on my hands',image:'https://upload.wikimedia.org/wikipedia/zh/8/8d/Doctor_Strange_2016_Poster.jpg' },
       { id: 13, name: 'Love Maker', description: 'u cannot see me ' },
       { id: 14, name: 'Lifepool', description: 'spider men is my friends' },
       { id: 15, name: 'white panther', description: 'rip' },
