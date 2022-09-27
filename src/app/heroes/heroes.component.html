@@ -9,18 +9,21 @@
   </button>
 </div>
 
-<ul class="heroes" *ngIf="isShowing">
-  <li *ngFor="let hero of heroes">
-    <a routerLink="/detail/{{hero.id}}">
-      <span class="badge">{{hero.id}}</span> {{hero.name}}
-    </a>
-    <button type="button" class="delete" title="delete hero"
-    (click)="delete(hero)">x</button>
-  </li>
-</ul>
+<ng-container *ngIf="isShowing">
+  <ul class="heroes">
+    <ng-container *ngFor="let hero of heroes">
+      <li>
+        <a routerLink="/detail/{{hero.id}}">
+          <span class="badge">{{hero.id}}</span> {{hero.name | titlecase}}
+        </a>
+        <button type="button" class="delete" title="delete hero" (click)="delete(hero)">x</button>
+      </li>
+    </ng-container>
+  </ul>
+</ng-container>
 
 <!-- 顯示英雄 -->
-<button type="button" (click)="isShowing = !isShowing" >
+<button type="button" (click)="isShowing = !isShowing">
   <span *ngIf="!isShowing">Show Heroes</span>
   <span *ngIf="isShowing">Hide Heroes</span>
 </button>
