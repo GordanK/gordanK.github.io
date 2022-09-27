@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
@@ -8,15 +8,18 @@ import { HeroService } from '../hero.service';
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css']
 })
-export class HeroesComponent implements OnInit {
+export class HeroesComponent implements OnInit{
 
   heroes: Hero[] = [];
   isShowing: boolean = true;
 
 
-  constructor(private heroService: HeroService) { }
+  constructor(private heroService: HeroService) {
+    console.log({constructor : "constructor"}); //first
+   }
 
   ngOnInit(): void {
+    console.log({OnInit : "on init"}); //later
     this.getHeroes();
   }
 

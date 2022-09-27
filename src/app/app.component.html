@@ -1,5 +1,13 @@
 <h1>{{title}}</h1>
-<nav>
+<nav class="flex justify-between p-4 bg-purple-800 text-white">
+  <div>
+    Hero select
+  </div>
+  <div>
+    <button>My Heroes</button>
+  </div>
+</nav>
+<nav class=" p-4">
   <li>
     <a routerLink="/dashboard" style="text-decoration:none;">Dashboard</a>
   </li>
@@ -7,5 +15,7 @@
     <a routerLink="/heroes" style="text-decoration:none;">Heroes</a>
   </li>
 </nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+<div class=" p-4">
+  <router-outlet></router-outlet>
+  <app-messages></app-messages>
+</div>
