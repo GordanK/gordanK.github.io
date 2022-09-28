@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { ArthModule } from './arth/arth.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    ArthModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
