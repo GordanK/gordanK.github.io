@@ -14,7 +14,8 @@
     <label for="hero-description">Hero description: </label>
     <input id="hero-description" [(ngModel)]="hero.description" placeholder="description">
   </div>
+<div>
+  <button type="button" (click)="goBack()">go back</button>
+  <button type="button" (click)="save()">save</button>
 </div>
-
-<button type="button" (click)="goBack()">go back</button>
-<button type="button" (click)="save()">save</button>
+</div>
