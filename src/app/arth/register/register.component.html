@@ -29,10 +29,10 @@
     </div>
     <div class="my-5 w-full">
       <button type="submit" [disabled]="myForm.form.invalid" class="p-2 rounded border">
-        <ng-container *ngIf="isLoading">
+        <ng-container *ngIf="isLoading()">
           Loading...
         </ng-container>
-        <ng-container *ngIf="!isLoading">
+        <ng-container *ngIf="!isLoading()">
           Submit
         </ng-container>
       </button>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Form } from 'src/app/form';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { ArthService } from '../arth.service';
 
 
 @Component({
@@ -15,27 +16,16 @@ export class LoginComponent implements OnInit {
     password: '',
   }
 
-  isLoading: boolean = false;
 
 
-  constructor() { }
+  constructor(private arthService:ArthService) { }
 
   ngOnInit(): void {
   }
   submit() {
-    if (this.isLoading) return;
-
-    this.isLoading = true;
-    const auth = getAuth();
-    signInWithEmailAndPassword(auth, this.form.email, this.form.password)
-      .then((userCredential) => {
-        alert("yaaaaaaaa login success")
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        alert("erroooo")
-      })
-      .finally(() => (this.isLoading = false));
+    this.arthService.login(this.form)
+  }
+  isLoading(){
+    return this.arthService.isLoading;
   }
 }

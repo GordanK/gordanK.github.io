@@ -1,7 +1,7 @@
 <div class="title">
   <h1>{{title}}</h1>
   <div class="dark">
-    <button (click)="toggleDarkTheme()">Dark Theme</button>
+    <button (click)="toggleDarkTheme()"><fa-icon [icon]="faMoon"></fa-icon></button>
   </div>
 </div>
 <nav class="flex  p-4 bg-purple-800 text-white">
@@ -22,4 +22,4 @@
   <router-outlet></router-outlet>
   <app-messages></app-messages>
 </div>
-<!-- <fa-icon [icon]="faCoffee"></fa-icon> -->
+

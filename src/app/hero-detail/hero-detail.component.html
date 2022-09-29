@@ -1,13 +1,13 @@
 <div *ngIf="hero">
   <h2>{{hero.name | uppercase}} Details</h2>
-  <div>Id: {{hero.id}}</div>
+  <div><p>Id: {{hero.id}}</p></div>
   <div>
-    <label for="hero-name">Hero name: </label>
+    <label for="hero-name">Hero Name: </label>
     <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
   </div>
   <br>
-  <div>Description: {{hero.description |uppercase}}</div>
-  Image: <img src={{hero.image}}> <br>
+  <div><p>Description: {{hero.description |uppercase}}</p></div>
+  <p>Image: <img src={{hero.image}}></p><br>
 
   <!--Adding hero description-->
   <div>

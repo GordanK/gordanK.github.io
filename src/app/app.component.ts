@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from './firebase.config';
-// import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faMoon } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,7 @@ export class AppComponent implements OnInit{
   toggleDarkTheme(): void {
     document.body.classList.toggle('dark-theme');
   }
-  // faCoffee = faCoffee;
+  faMoon = faMoon;
   ngOnInit(): void {
     initializeApp(firebaseConfig);
   }

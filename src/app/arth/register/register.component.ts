@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RegisterForm } from 'src/app/register-form';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { ArthService } from '../arth.service';
 
 @Component({
   selector: 'app-register',
@@ -14,30 +15,17 @@ export class RegisterComponent implements OnInit {
     password: '',
     confirmPassword: '',
   }
-  passwordMatched: boolean = true;
-  isLoading: boolean = false;
 
-  constructor() { }
+
+
+  constructor(private arthService:ArthService) { }
 
   ngOnInit(): void {
   }
   submit() {
-    if (this.isLoading) return;
-
-    this.isLoading = true;
-    if (this.form.password != this.form.confirmPassword) {
-      this.passwordMatched = false;
-      return;
-    }
-    const auth = getAuth();
-    createUserWithEmailAndPassword(auth, this.form.email, this.form.password)
-      .then((userCredential) => {
-        console.log(userCredential);
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      })
-      .finally(() => (this.isLoading = false));
+    this.arthService.register(this.form);
+  }
+  isLoading(){
+    return this.arthService.isLoading;
   }
 }
