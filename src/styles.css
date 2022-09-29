@@ -2,3 +2,35 @@
 /* @tailwind base; */
 /* @tailwind components; */
 @tailwind utilities;
+
+
+/* Dark mode */
+body {
+  --text-color: #222;
+  --bkg-color: #fff;
+  --btn-txt-color: white;
+  --btn-bg-color: rgb(9, 49, 87);
+}
+body.dark-theme {
+  --text-color: #eee;
+  --bkg-color: #252222;
+  --btn-txt-color: rgb(46, 43, 43);
+  --btn-bg-color: rgb(20, 211, 195);
+}
+
+body {
+  background: var(--bkg-color);
+}
+
+h1,h2,label,
+p {
+  color: var(--text-color);
+}
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+  color: var(--btn-txt-color);
+  background-color: var(--btn-bg-color);
+}
+

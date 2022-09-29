@@ -12,6 +12,8 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { ArthModule } from './arth/arth.module';
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,7 @@ import { ArthModule } from './arth/arth.module';
     AppRoutingModule,
     HttpClientModule,
     ArthModule,
-
+    // FontAwesomeModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.

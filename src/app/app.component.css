@@ -50,3 +50,8 @@ nav{
   justify-content: space-evenly;
   background-color:rgb(120, 0, 120);
 }
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
