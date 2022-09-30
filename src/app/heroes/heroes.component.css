@@ -88,3 +88,7 @@ button.delete:hover {
   background-color: #525252;
   color: white;
 }
+input {
+  color: var(--text-color);
+  background-color: var(--inp-bg-color);
+}

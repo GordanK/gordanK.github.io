@@ -36,3 +36,7 @@ button:disabled {
   color: #ccc;
   cursor: auto;
 }
+input {
+  color: var(--text-color);
+  background-color: var(--inp-bg-color);
+}

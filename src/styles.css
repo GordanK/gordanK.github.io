@@ -10,12 +10,14 @@ body {
   --bkg-color: #fff;
   --btn-txt-color: white;
   --btn-bg-color: rgb(9, 49, 87);
+  --inp-bg-color:lightgray;
 }
 body.dark-theme {
   --text-color: #eee;
   --bkg-color: #252222;
   --btn-txt-color: rgb(46, 43, 43);
   --btn-bg-color: rgb(20, 211, 195);
+  --inp-bg-color:black;
 }
 
 body {
